@@ -5,10 +5,9 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { SectionWrapper } from "../hoc";
 
 const ServiceCard = (index) => {
-  // console.log(index, title, icon);
-  console.log(index.title);
   return (
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
@@ -17,14 +16,14 @@ const ServiceCard = (index) => {
       >
         <div
           options={{ max: 45, scale: 1, speed: 450 }}
-          className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+          className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col"
         >
           <img
             src={index.icon}
             alt={index.title}
             className="w-16 h-16 object-contain"
           />
-          <h3 className="test-white text-[20px] font-bold text-center">
+          <h3 className="text-white text-[24px] font-bold text-center">
             {index.title}
           </h3>
         </div>
@@ -37,7 +36,6 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        // test
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
@@ -46,22 +44,24 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        Im super great!
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum."
         <br />
         [-DESCRIPTION HERE-]
       </motion.p>
+
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
-          <ServiceCard
-            key={service.title}
-            index={index}
-            icon={service.icon}
-            title={service.title}
-          />
+          <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
     </>
   );
 };
 
-export default About;
+export default SectionWrapper(About, "about");
