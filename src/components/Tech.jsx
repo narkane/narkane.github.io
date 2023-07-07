@@ -2,7 +2,7 @@
 import React from "react";
 import { SectionWrapper } from "../hoc";
 import { RenderTexture } from "@react-three/drei";
-import { zoomIn } from "../utils/motion";
+import { textVariant, fadeIn } from "../utils/motion";
 import { motion } from "framer-motion";
 
 class Tech extends React.Component {
@@ -28,23 +28,28 @@ class Tech extends React.Component {
 
   render() {
     const { isFocused } = this.state;
-    const iframeOpacity = isFocused ? 1 : 0.5;
-    // console.log(transparency, this.clicked);
+    const iframeOpacity = isFocused ? 1 : 0.75;
+    console.log(iframeOpacity);
     return (
-      <div
-        style={{
-          opacity: iframeOpacity,
-        }}
-        onMouseOver={this.handleClick}
-        onMouseLeave={this.handleBlur}
+      <motion.div
+        variants={fadeIn("down", "spring", 1, 4)}
+        // id="motiondiv"
       >
-        <iframe
-          className={`w-full h-[600px] green-pink-gradient p-[3px] rounded-[40px] shadow-card`}
-          src="./FPS.html"
-          ref={this.iframeRef}
-          style={{ pointerEvents: isFocused ? "auto" : "none" }}
-        />
-      </div>
+        <div
+          style={{
+            opacity: iframeOpacity,
+          }}
+          onMouseOver={this.handleClick}
+          onMouseLeave={this.handleBlur}
+        >
+          <iframe
+            className={`w-full h-[600px] green-pink-gradient p-[3px] rounded-[40px] shadow-card`}
+            src="./FPS.html"
+            ref={this.iframeRef}
+            style={{ pointerEvents: isFocused ? "auto" : "none" }}
+          />
+        </div>
+      </motion.div>
     );
   }
 }

@@ -19,6 +19,7 @@ const Navbar = () => {
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
+            document.body.style.overflow = "hidden";
           }}
         >
           <img src="jtt.png" alt="logo" className="w-9 h-9 object-contain" />
@@ -36,6 +37,7 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => {
                 setActive(link.title);
+                document.body.style.overflow = "visible";
               }}
             >
               <a href={`#${link.id}`}>{link.title}</a>
