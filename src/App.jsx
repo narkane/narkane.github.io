@@ -24,6 +24,7 @@ const App = () => {
 
   setTimeout(() => {
     setIsActive(false);
+    // FIXME: scroll blocking is broken for reload on #labels
     // document.body.style.overflow = "visible";
   }, 2000);
 
@@ -35,16 +36,34 @@ const App = () => {
           fadeSpeed={2000}
           spinner={
             <ScaleLoader
-              width="8"
-              height="75"
+              width="80"
+              height="120"
               margin="6"
-              radius="5"
+              radius="15"
               color="#9746d7"
               // speedMultiplier={1.5}
             />
           }
         >
-          <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+          <div
+            className="flex justify-center items-center h-screen bg-hero-pattern bg-cover bg-no-repeat bg-center"
+            id="welcome"
+          >
+            <a
+              onClick={() => {
+                document.getElementById("welcome").style.height = 0;
+                document.getElementById("home").style.opacity = 1;
+              }}
+              className="glow-link text-4xl text-center font-bold"
+            >
+              Welcome
+            </a>
+          </div>
+          <div
+            className="bg-hero-pattern bg-cover bg-no-repeat bg-center"
+            id="home"
+            style={{ opacity: 0 }}
+          >
             <Navbar />
             <Hero />
           </div>

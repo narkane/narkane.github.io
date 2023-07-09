@@ -34,10 +34,15 @@ const Navbar = () => {
               key={link.id}
               className={`${
                 active === link.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              } text-[18px] font-medium cursor-pointer flicker-link`}
               onClick={() => {
                 setActive(link.title);
                 document.body.style.overflow = "visible";
+              }}
+              onMouseOver={() => {
+                const hover = new Audio("./linkhover.wav");
+                hover.volume = 0.05;
+                hover.play();
               }}
             >
               <a href={`#${link.id}`}>{link.title}</a>

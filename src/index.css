@@ -202,3 +202,63 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
+.flicker-link {
+  color: gray; /* Set original color */
+  /* transition: color 0.3s; Add smooth color transition on hover */
+}
+
+.flicker-link:hover {
+  color: white;
+  animation: flickerAnimation 0.2s 1; /* Start the flicker animation */
+  /* animation: none; Stop the flicker animation */
+}
+
+@keyframes flickerAnimation {
+  0% {
+    color: gray;
+  }
+  10% {
+    color: white;
+  }
+  25% {
+    color: gray;
+  }
+  30% {
+    color: white;
+  }
+  50% {
+    color: gray;
+  }
+  66% {
+    color: white;
+  }
+  70% {
+    color: gray;
+  }
+  90% {
+    color: white;
+  }
+  92% {
+    color: gray;
+  }
+  95% {
+    color: white;
+  }
+  97% {
+    color: gray;
+  }
+  100% {
+    color: white;
+  }
+}
+
+.glow-link {
+  font-family: serif;
+  color: #aaa; /* Set the initial color of the link */
+  transition: text-shadow 0.5s; /* Add a smooth transition effect to the glow */
+}
+
+.glow-link:hover {
+  text-shadow: 0 0 6px #000, 0 0 80px #95b, 0 0 30px #000; /* Apply the glow effect */
+}
