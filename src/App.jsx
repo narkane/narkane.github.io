@@ -19,6 +19,7 @@ import {
 const App = () => {
   const [isActive, setIsActive] = useState(true);
 
+  window.scrollTo(0, 0);
   document.body.style.height = "100%";
   document.body.style.overflow = "hidden";
 

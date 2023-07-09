@@ -41,7 +41,7 @@ const Navbar = () => {
               }}
               onMouseOver={() => {
                 const hover = new Audio("./linkhover.wav");
-                hover.volume = 0.05;
+                hover.volume = 0.08;
                 hover.play();
               }}
             >

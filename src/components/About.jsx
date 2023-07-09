@@ -17,6 +17,11 @@ const ServiceCard = (index) => {
         <div
           options={{ max: 45, scale: 1, speed: 450 }}
           className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col"
+          onMouseOver={() => {
+            const cardhover = new Audio("./cardhover.wav");
+            cardhover.volume = 0.09;
+            cardhover.play();
+          }}
         >
           <img
             src={index.icon}

@@ -13,7 +13,7 @@ const SectionWrapper = (Component, idName) =>
       case "":
         try {
           audio = new Audio("./woosh.wav");
-          audio.volume = 0.1;
+          audio.volume = 0.2;
           // audio.play();
         } catch (error) {
           console.log(error);
