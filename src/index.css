@@ -262,3 +262,14 @@
 .glow-link:hover {
   text-shadow: 0 0 6px #000, 0 0 80px #95b, 0 0 30px #000; /* Apply the glow effect */
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

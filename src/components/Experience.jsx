@@ -8,7 +8,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
+import { fadeIn, textVariant, staggerContainer, ballIn } from "../utils/motion";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -27,9 +27,30 @@ const ExperienceCard = ({ experience }) => {
         </div>
       }
     >
-      <div>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-      </div>
+      <motion.section
+        variants={ballIn("up", "spring", 0.1, 3)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+      >
+        <div>
+          <h3 className="text-white text-[24px] font-bold">
+            {experience.title}
+          </h3>
+          <p>{experience.company_name}</p>
+        </div>
+
+        <ul className="mt-5 list-disc ml-5 space-y-2">
+          {experience.points.map((point, index) => (
+            <li
+              key={`experience-point-${index}`}
+              className="text-white-100 text-[14px] pl-1 tracking-wider"
+            >
+              {point}
+            </li>
+          ))}
+        </ul>
+      </motion.section>
     </VerticalTimelineElement>
   );
 };
@@ -44,9 +65,9 @@ const Experience = () => {
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
-          ))}
+          {experiences.map((experience, index) => {
+            return <ExperienceCard key={index} experience={experience} />;
+          })}
         </VerticalTimeline>
       </div>
     </>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import LoadingOverlay from "react-loading-overlay";
 import { motion } from "framer-motion";
@@ -19,7 +19,6 @@ import {
 const App = () => {
   const [isActive, setIsActive] = useState(true);
 
-  window.scrollTo(0, 0);
   document.body.style.height = "100%";
   document.body.style.overflow = "hidden";
 
