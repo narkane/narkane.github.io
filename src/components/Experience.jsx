@@ -26,6 +26,31 @@ const ExperienceCard = ({ experience }) => {
           />
         </div>
       }
+      // style={{ display: "none" }}
+
+      iconOnClick={(exp) => {
+        console.log(exp, exp.target.alt);
+        var expDesc = document.getElementById(`exp-desc-${exp.target.alt}`);
+        // retrieve proper icon even if border (parent) element is clicked
+        if (exp.target.alt === undefined) {
+          expDesc = document.getElementById(
+            `exp-desc-${exp.target.firstChild.alt}`
+          );
+        }
+        // const expDesc = exp.target.parentNode.parentNode.parentNode.children[1];
+        console.log(expDesc, expDesc.style.display);
+
+        if (expDesc.style.display === "none" || expDesc.style.display === "") {
+          console.log("none");
+          // console.log(exp.target.parentNode.parentNode.parentNode.children[1]);
+          // const timelineElement = document.getElementById(exp.target);
+          console.log(expDesc.style.display);
+          expDesc.style.display = "initial";
+        } else {
+          console.log("not none");
+          expDesc.style.display = "none";
+        }
+      }}
     >
       <motion.section
         variants={ballIn("up", "spring", 0.1, 3)}
@@ -35,12 +60,18 @@ const ExperienceCard = ({ experience }) => {
       >
         <div>
           <h3 className="text-white text-[24px] font-bold">
-            {experience.title}
+            {experience.title}{" "}
+            <small className="text-[12px] text-secondary">
+              [{experience.company_name}]
+            </small>
           </h3>
-          <p>{experience.company_name}</p>
+          {/* <p>{experience.company_name}</p> */}
         </div>
 
-        <ul className="mt-5 list-disc ml-5 space-y-2">
+        <ul
+          id={`exp-desc-${experience.company_name}`}
+          className="mt-5 list-disc ml-5 space-y-2"
+        >
           {experience.points.map((point, index) => (
             <li
               key={`experience-point-${index}`}

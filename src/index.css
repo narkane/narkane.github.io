@@ -273,3 +273,22 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.vertical-timeline-element-content > section > ul {
+  display: none;
+}
+
+.vertical-timeline-element-content {
+  /* margin-top: -24px !important; */
+  /* padding-bottom: 12px !important; */
+  margin-bottom: -48px !important;
+}
+
+.vertical-timeline-element-icon: {
+  /* transition: 2s ease-in-out; */
+}
+.vertical-timeline-element-icon:hover {
+  box-shadow: 6px 6px 48px #1d1836;
+  transition: 0.75s ease-in-out;
+  /* box-shadow: -10px 0 32px #33ff33; */
+}
