@@ -99,7 +99,17 @@ const Experience = () => {
           className="text-center text-[12px]"
           style={{ marginBottom: "-6px" }}
         >
-          [click to expand]
+          <span
+            style={{
+              fontSize: "12px",
+              border: "1px solid white",
+              borderRadius: "7px",
+              paddingLeft: "5px",
+              paddingRight: "5px",
+            }}
+          >
+            CLICK TO EXPAND
+          </span>
           <br />T
         </span>
         <VerticalTimeline className="text-start">

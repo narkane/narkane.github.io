@@ -16,6 +16,8 @@ import {
   StarsCanvas,
 } from "./components";
 
+LoadingOverlay.propTypes = undefined;
+
 const App = () => {
   const [isActive, setIsActive] = useState(true);
 
@@ -36,10 +38,10 @@ const App = () => {
           fadeSpeed={2000}
           spinner={
             <ScaleLoader
-              width="80"
-              height="120"
-              margin="6"
-              radius="15"
+              width="80px"
+              height="120px"
+              margin="6px"
+              radius="15px"
               color="#9746d7"
               // speedMultiplier={1.5}
             />
@@ -51,7 +53,7 @@ const App = () => {
           >
             <a
               onClick={() => {
-                document.getElementById("welcome").style.height = 0;
+                document.getElementById("welcome").style.display = "none";
                 document.getElementById("home").style.opacity = 1;
               }}
               className="glow-link text-4xl text-center font-bold"
