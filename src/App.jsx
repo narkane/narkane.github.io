@@ -15,6 +15,7 @@ import {
   Works,
   StarsCanvas,
 } from "./components";
+import { Tilt } from "react-tilt";
 
 LoadingOverlay.propTypes = undefined;
 
@@ -52,23 +53,35 @@ const App = () => {
             id="welcome"
             className="flex justify-center items-center h-screen bg-hero-pattern bg-cover bg-no-repeat bg-center"
           >
-            <div class="welcome glow-link font-bold">
-              <a
-                onClick={() => {
-                  document.getElementById("welcome").style.display = "none";
-                  document.getElementById("home").style.opacity = 1;
-                }}
-                onMouseEnter={() => {
-                  document.getElementById("waves").style.opacity = 0;
-                }}
-                onMouseLeave={() => {
-                  document.getElementById("waves").style.opacity = 1;
-                }}
-              >
-                <h2>WELCOME</h2>
-                <h2 id="waves">WELCOME</h2>
-              </a>
-            </div>
+            <Tilt>
+              <div class="blurred-box flex h-[350px] w-[250px] z-10 backdrop-blur-[1px] shadow-card shadow-blue-500 rounded-xl bg-blue-600 bg-opacity-[0.05] rounded-lg">
+                <div class="user-login-box filter-none">
+                  <span class="user-icon">
+                    <img id="portrait" src="./portrait4.png" />
+                  </span>
+                  <div class="user-name">John Thummel</div>
+
+                  <div class="welcome glow-link font-bold">
+                    <a
+                      onClick={() => {
+                        document.getElementById("welcome").style.display =
+                          "none";
+                        document.getElementById("home").style.opacity = 1;
+                      }}
+                      onMouseEnter={() => {
+                        document.getElementById("waves").style.opacity = 0;
+                      }}
+                      onMouseLeave={() => {
+                        document.getElementById("waves").style.opacity = 1;
+                      }}
+                    >
+                      <h2>WELCOME</h2>
+                      <h2 id="waves">WELCOME</h2>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Tilt>
           </section>
           {/* <div
             className="flex justify-center items-center h-screen bg-hero-pattern bg-cover bg-no-repeat bg-center"
