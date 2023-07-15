@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import LoadingOverlay from "react-loading-overlay";
 import { motion } from "framer-motion";
-import { ScaleLoader } from "react-spinners";
+import { BarLoader, ScaleLoader } from "react-spinners";
 
 import {
   About,
@@ -37,30 +37,54 @@ const App = () => {
           active={isActive}
           fadeSpeed={2000}
           spinner={
-            <ScaleLoader
-              width="80px"
-              height="120px"
-              margin="6px"
-              radius="15px"
+            <BarLoader
+              className="mt-[-30px]"
+              width="300px"
+              height="6px"
+              // margin="6px"
+              // radius="15px"
               color="#9746d7"
               // speedMultiplier={1.5}
             />
           }
         >
-          <div
+          <section
+            id="welcome"
+            className="flex justify-center items-center h-screen bg-hero-pattern bg-cover bg-no-repeat bg-center"
+          >
+            <div class="welcome glow-link font-bold">
+              <a
+                onClick={() => {
+                  document.getElementById("welcome").style.display = "none";
+                  document.getElementById("home").style.opacity = 1;
+                }}
+                onMouseEnter={() => {
+                  document.getElementById("waves").style.opacity = 0;
+                }}
+                onMouseLeave={() => {
+                  document.getElementById("waves").style.opacity = 1;
+                }}
+              >
+                <h2>WELCOME</h2>
+                <h2 id="waves">WELCOME</h2>
+              </a>
+            </div>
+          </section>
+          {/* <div
             className="flex justify-center items-center h-screen bg-hero-pattern bg-cover bg-no-repeat bg-center"
             id="welcome"
           >
-            <a
+            <button
+              class="flicker-link bg-transparent hover:bg-[#705Ca8] hover:bg-opacity-10 font-semibold py-2 px-4 border border-gray-600 rounded shadow-card glow-link"
               onClick={() => {
                 document.getElementById("welcome").style.display = "none";
                 document.getElementById("home").style.opacity = 1;
               }}
-              className="glow-link text-4xl text-center font-bold"
+              // className="glow-link text-4xl text-center font-bold"
             >
-              Welcome
-            </a>
-          </div>
+              WELCOME
+            </button>
+          </div> */}
           <div
             className="bg-hero-pattern bg-cover bg-no-repeat bg-center"
             id="home"

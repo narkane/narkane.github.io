@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
 @tailwind base;
 @tailwind components;
@@ -255,7 +256,7 @@
 
 .glow-link {
   font-family: serif;
-  color: #aaa; /* Set the initial color of the link */
+  /* color: #aaa; Set the initial color of the link */
   transition: text-shadow 0.5s; /* Add a smooth transition effect to the glow */
 }
 
@@ -291,4 +292,85 @@ body {
   box-shadow: 6px 6px 48px #1d1836;
   transition: 0.75s ease-in-out;
   /* box-shadow: -10px 0 32px #33ff33; */
+}
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+} */
+
+/* body {
+  display: flex;
+  background: #000;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+} */
+
+.welcome {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+.welcome h2 {
+  color: #fff;
+  font-size: 4em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.welcome a:hover {
+  cursor: pointer;
+}
+
+.welcome h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #705ca8;
+}
+
+.welcome h2:nth-child(2) {
+  color: #705ca8;
+  animation: welcome-animate 4s ease-in-out infinite;
+}
+
+@keyframes welcome-animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+#home {
+  opacity: 0;
+  -webkit-transition: all 3s ease-in-out;
+  -moz-transition: all 3s ease-in-out;
+  -ms-transition: all 3s ease-in-out;
+  -o-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out;
 }
