@@ -54,20 +54,21 @@ const App = () => {
             className="flex justify-center items-center h-screen bg-hero-pattern bg-cover bg-no-repeat bg-center"
           >
             <Tilt>
-              <div class="blurred-box flex h-[350px] w-[250px] z-10 backdrop-blur-[1px] shadow-card shadow-blue-500 rounded-xl bg-blue-600 bg-opacity-[0.05] rounded-lg">
-                <div class="user-login-box filter-none">
+              <div
+                class="blurred-box border-opacity-100 rounded-xl flex h-[350px] w-[250px] z-10 backdrop-blur-[1px] shadow-card shadow-[#5D508D] bg-blue-600 bg-opacity-[0.05]"
+                onClick={() => {
+                  document.getElementById("welcome").style.display = "none";
+                  document.getElementById("home").style.opacity = 1;
+                }}
+              >
+                <div class="user-login-box">
                   <span class="user-icon">
-                    <img id="portrait" src="./portrait4.png" />
+                    <img id="portrait" src="./portriat14.png" />
                   </span>
                   <div class="user-name">John Thummel</div>
 
                   <div class="welcome glow-link font-bold">
                     <a
-                      onClick={() => {
-                        document.getElementById("welcome").style.display =
-                          "none";
-                        document.getElementById("home").style.opacity = 1;
-                      }}
                       onMouseEnter={() => {
                         document.getElementById("waves").style.opacity = 0;
                       }}

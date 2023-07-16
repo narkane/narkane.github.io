@@ -310,16 +310,23 @@ body {
 } */
 
 #portrait {
-  scale: 2.33;
+  scale: 1.65;
   position: relative;
   top: 3px;
-  left: 4px;
-  opacity: 0.82;
+  left: 3px;
+  opacity: 0.6;
+  filter: hue-rotate(10deg);
+  -webkit-filter: hue-rotate(10deg);
 }
 
 .welcome {
   position: relative;
   font-family: "Comic Sans", sans-serif;
+}
+#welcome div div {
+  cursor: pointer;
+  background-image: url("./portrait11.png");
+  background-position: -250px -210px;
 }
 
 .welcome h2 {
@@ -330,18 +337,20 @@ body {
 }
 
 .welcome a:hover {
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .welcome h2:nth-child(1) {
   color: transparent;
-  -webkit-text-stroke: 2px rgba(160, 192, 235, 0.5);
+  -webkit-text-stroke: 2px rgba(255, 95, 255, 0.5);
   /* #acf; */
 }
 
 .welcome h2:nth-child(2) {
-  color: rgba(120, 165, 255, 0.85);
-  /* opacity: 0.05; */
+  /* color: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  color: --webkit-linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%); */
+  color: rgba(205, 205, 205, 0.6);
+  /* opacity: 0.5; */
   animation: welcome-animate 4s ease-in-out infinite;
 }
 
@@ -393,8 +402,8 @@ body {
   height: 350px;
   top: calc(50% - 175px);
   left: calc(50% - 125px);
+  border: outset 5px rgba(200, 200, 200, 0.35);
   background: inherit;
-  border-radius: 2px;
   overflow: hidden;
 }
 
