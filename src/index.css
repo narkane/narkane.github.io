@@ -206,51 +206,89 @@
 
 .flicker-link {
   color: gray; /* Set original color */
+  border-color: white;
   /* transition: color 0.3s; Add smooth color transition on hover */
 }
 
 .flicker-link:hover {
   color: white;
-  animation: flickerAnimation 0.2s 1; /* Start the flicker animation */
+  border-color: gray;
+  animation: flickerAnimation 0.3s 1; /* Start the flicker animation */
   /* animation: none; Stop the flicker animation */
 }
 
 @keyframes flickerAnimation {
   0% {
     color: gray;
+    border-color: white;
+
+    opacity: 1;
   }
   10% {
     color: white;
+    border-color: gray;
+
+    opacity: 0.1;
   }
   25% {
     color: gray;
+    border-color: white;
+
+    opacity: 1;
   }
   30% {
     color: white;
+    border-color: gray;
+
+    opacity: 0.1;
   }
   50% {
     color: gray;
+    border-color: white;
+
+    opacity: 1;
   }
   66% {
     color: white;
+    border-color: gray;
+
+    opacity: 0.1;
   }
   70% {
     color: gray;
+    border-color: white;
+
+    opacity: 1;
   }
   90% {
     color: white;
+    border-color: gray;
+
+    opacity: 0.1;
   }
   92% {
     color: gray;
+    border-color: white;
+
+    opacity: 1;
   }
   95% {
     color: white;
+    border-color: gray;
+
+    opacity: 0.1;
   }
   97% {
     color: gray;
+    border-color: white;
+
+    opacity: 1;
   }
   100% {
     color: white;
+    border-color: gray;
+
+    opacity: 0.1;
   }
 }
 
