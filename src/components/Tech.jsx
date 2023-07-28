@@ -14,7 +14,6 @@ const Tech = () => {
         {/* <hr className="bg-gradient-to-r from-cyan-500 to-blue-500" /> */}
         {/* <br /> */}
       </motion.div>
-
       {/* <hr
           style={{
             border: "0px",
@@ -33,13 +32,20 @@ const Tech = () => {
             >
               <div className="w-28 h-28" key={technology.name}>
                 <BallCanvas icon={technology.icon} />
-                <span className="flex justify-center text-[#915EFF]">
+                <span className="flex justify-center text-[#915EFF] text-center">
                   {technology.name}
                 </span>
               </div>
             </motion.div>
           );
         })}
+        <div className="text-[50px] text-[#593eaa] bold mt-[14px] mr-[-64px]">
+          . . .
+        </div>
+      </div>
+      <br />
+      <div className="w-full text-center text-[#504488] relative top-[48px]">
+        - tech upon request -
       </div>
     </>
   );

@@ -20,6 +20,13 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import vuejs from "./tech/vue.png";
+import vite from "./tech/vite.svg";
+import python from "./tech/python.png";
+import sql from "./tech/sql.png";
+import googlec from "./tech/googlec.svg";
+import tensorflow from "./tech/tensorflow.png";
+import opencv from "./tech/opencv.png";
 
 import unt from "./company/unt.png";
 import w4a from "./company/w4a.png";
@@ -53,6 +60,13 @@ export {
   nodejs,
   reactjs,
   redux,
+  vuejs,
+  vite,
+  tensorflow,
+  opencv,
+  python,
+  sql,
+  googlec,
   tailwind,
   typescript,
   threejs,

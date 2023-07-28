@@ -8,13 +8,14 @@ import {
   html,
   css,
   reactjs,
-  redux,
-  tailwind,
   nodejs,
   mongodb,
-  git,
-  figma,
-  docker,
+  googlec,
+  vuejs,
+  tensorflow,
+  opencv,
+  python,
+  sql,
   unt,
   weston,
   agr,
@@ -26,7 +27,6 @@ import {
   carrent,
   jobit,
   tripguide,
-  threejs,
 } from "../assets";
 
 export const navLinks = [
@@ -76,22 +76,34 @@ const technologies = [
     name: "JavaScript",
     icon: javascript,
   },
+  // {
+  //   name: "TypeScript",
+  //   icon: typescript,
+  // },
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "Python",
+    icon: python,
+  },
+  {
+    name: "Tensorflow",
+    icon: tensorflow,
   },
   {
     name: "React JS",
     icon: reactjs,
   },
+  // {
+  //   name: "Redux Toolkit",
+  //   icon: redux,
+  // },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Vue JS",
+    icon: vuejs,
   },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
+  // {
+  //   name: "Vite",
+  //   icon: vite,
+  // },
   {
     name: "Node JS",
     icon: nodejs,
@@ -101,20 +113,30 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "SQL",
+    icon: sql,
+  },
+  // {
+  //   name: "Three JS",
+  //   icon: threejs,
+  // },
+  // {
+  //   name: "git",
+  //   icon: git,
+  // },
+  {
+    name: (
+      <div>
+        GCP
+        {/* <br /> */}
+        <span className="text-[10px]">(APIs & CI/CD)</span>
+      </div>
+    ),
+    icon: googlec,
   },
   {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
+    name: "OpenCV",
+    icon: opencv,
   },
 ];
 
