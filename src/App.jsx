@@ -110,6 +110,7 @@ const App = () => {
         </LoadingOverlay>
         <About />
         <Experience />
+
         <Tech />
         <Works />
         <Feedbacks />
