@@ -1,20 +1,81 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+// import * as textbelt from "TextBelt";
+// const text = require("TextBelt");
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+// emailjs service(yandex) ID: service_5abfjtw
+// emailjs template ID: template_3li88dk
+// public key: CJnG-l0ZMKOSspefo
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [Loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    const { name, value /*email, message*/ } = e.target;
+    setForm({ ...form, [name]: value });
+  };
 
-  const handleSubmit = (e) => {};
+  const handleSubmit = (e) => {
+    // prevents page refresh
+    e.preventDefault();
+    // start email sending
+    setLoading(true);
+
+    // TODO: Create text vs. email radio buttton??
+
+    // TODO: if text:
+    // // Send message via text (7138744987)
+    // const text_message = "Name: " + form.name + "\n";
+    // "Email: " + form.email + "\n";
+    // "Message: " + form.message;
+    // textbelt.sendText("7138744987", text_message, undefined, function (err) {
+    //   if (err) {
+    //     console.log(err);
+    //   }
+    // });
+
+    // TODO: if email:
+    // Send message via email (john@thummel.site)
+    emailjs
+      .send(
+        "service_5abfjtw",
+        "template_3li88dk",
+        {
+          from_name: form.name,
+          to_name: "John",
+          from_email: form.email,
+          to_email: ["john@thummel.site", "7138744987@tmomail.net"],
+          message: form.message,
+        },
+        "CJnG-l0ZMKOSspefo"
+      )
+      .then(() => {
+        setLoading(false);
+        alert("Thank you! I will get back to you as soon as possible.");
+
+        setForm(
+          {
+            name: "",
+            email: "",
+            message: "",
+          },
+          (error) => {
+            setLoading(false);
+
+            console.log(error);
+            alert("Something went wrong.");
+          }
+        );
+      });
+  };
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
