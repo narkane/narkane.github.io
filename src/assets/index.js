@@ -38,8 +38,12 @@ import weaselware from "./company/weaselware.jpg";
 import devmountain from "./company/devmountain.png";
 
 import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+// import jobit from "./jobit.png";
+import awkwardstyles from "./awkwardstyles.png";
+import bbp from "./bbp.png";
+
+import ben from "./ben.png";
+import jana from "./jana.png";
 
 export {
   logo,
@@ -79,6 +83,8 @@ export {
   weaselware,
   devmountain,
   carrent,
-  jobit,
-  tripguide,
+  awkwardstyles,
+  bbp,
+  ben,
+  jana,
 };

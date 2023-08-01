@@ -32,7 +32,6 @@ const Contact = () => {
     // TODO: Create text vs. email radio buttton??
 
     // TODO: if text:
-    // // Send message via text (7138744987)
     // const text_message = "Name: " + form.name + "\n";
     // "Email: " + form.email + "\n";
     // "Message: " + form.message;
@@ -52,7 +51,7 @@ const Contact = () => {
           from_name: form.name,
           to_name: "John",
           from_email: form.email,
-          to_email: ["john@thummel.site", "7138744987@tmomail.net"],
+          to_email: ["john@thummel.site", "8326387800@tmomail.net"],
           message: form.message,
         },
         "CJnG-l0ZMKOSspefo"
@@ -85,7 +84,6 @@ const Contact = () => {
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact</h3>
-
         <form
           ref={formRef}
           onSubmit={handleSubmit}
@@ -132,6 +130,9 @@ const Contact = () => {
             {Loading ? "Sending..." : "Send"}
           </button>
         </form>
+        <span className="text-[13px] text-gray-500 absolute right-10 bottom-7">
+          via text and email
+        </span>
       </motion.div>
 
       <motion.div

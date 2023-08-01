@@ -25,8 +25,10 @@ import {
   weaselware,
   devmountain,
   carrent,
-  jobit,
-  tripguide,
+  awkwardstyles,
+  bbp,
+  ben,
+  jana,
 } from "../assets";
 
 export const navLinks = [
@@ -238,27 +240,27 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "A skilled and efficient web developer who truly cares about his clients' success. He's just so smart.",
+    name: "Jana Leys",
+    designation: "Owner",
+    company: "Courtesy A/C and Heating",
+    image: jana,
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
+      "John said his aim was to minimize the gap between my imagination and the deliverable. He delivered that and more.",
+    name: "Richard Martin",
+    designation: "CEO",
+    company: "Datanow, LLC",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "I've never seen a developer work quite like John. He simply hammers at whatever is asked. Innovative and passionate, he pushes beyond what is asked making it clear he loves what he does.",
+    name: "Ben Hoggatt",
+    designation: "CEO",
+    company: "OurEarth",
+    image: ben,
   },
 ];
 
@@ -305,7 +307,7 @@ const projects = [
   {
     name: "Care",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Non-profit site inspired by Reddit's r/place. Sells geospace for drawing, advertising, menus, and more to fund clean water projects.",
     tags: [
       {
         name: "#vue",
@@ -339,12 +341,20 @@ const projects = [
     source_code_link: "https://github.com/narkane/care-frontend",
   },
   {
-    name: "Job IT",
+    name: "Awkward Styles",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Web application that enables users and artists to shop, design and order custom graphic tees to profit a percentage from their resale on this online platform.",
     tags: [
       {
-        name: "#react",
+        name: "#vue",
+        color: "text-[#4CBA87]",
+      },
+      {
+        name: "#laravel",
+        color: "text-[#cc4444]",
+      },
+      {
+        name: "#MySQL",
         color: "blue-text-gradient",
       },
       {
@@ -356,29 +366,33 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: awkwardstyles,
+    source_code_link: "https://github.com/narkane/awkward-styles",
   },
   {
-    name: "Trip Guide",
+    name: "Big Bang Printing",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Custom merchandise design and printing, specializing in bulk commercial orders while accommodating small B2C custom orders.",
     tags: [
       {
-        name: "#nextjs",
+        name: "#laravel",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "#MySQL",
         color: "blue-text-gradient",
       },
       {
-        name: "#supabase",
+        name: "#restapi",
         color: "green-text-gradient",
       },
       {
         name: "#css",
-        color: "pink-text-gradient",
+        color: "text-[#77bbff]",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: bbp,
+    source_code_link: "https://github.com/narkane/bigbang",
   },
 ];
 
