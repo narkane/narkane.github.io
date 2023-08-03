@@ -57,8 +57,9 @@ const App = () => {
               <div
                 class="blurred-box border-opacity-100 rounded-xl flex h-[350px] w-[250px] z-10 backdrop-blur-[1px] shadow-card shadow-[#5D508D] bg-blue-600 bg-opacity-[0.05]"
                 onClick={() => {
-                  document.getElementById("welcome").style.display = "none";
-                  document.getElementById("home").style.opacity = 1;
+                  // document.getElementById("welcome").style.display = "none";
+                  document.getElementById("welcome").remove();
+                  // document.getElementById("home").style.opacity = 1;
                 }}
               >
                 <div class="user-login-box">
@@ -76,33 +77,18 @@ const App = () => {
                         document.getElementById("waves").style.opacity = 1;
                       }}
                     >
-                      <h2>WELCOME</h2>
-                      <h2 id="waves">WELCOME</h2>
+                      <h3>WELCOME</h3>
+                      <h3 id="waves">WELCOME</h3>
                     </a>
                   </div>
                 </div>
               </div>
             </Tilt>
           </section>
-          {/* <div
-            className="flex justify-center items-center h-screen bg-hero-pattern bg-cover bg-no-repeat bg-center"
-            id="welcome"
-          >
-            <button
-              class="flicker-link bg-transparent hover:bg-[#705Ca8] hover:bg-opacity-10 font-semibold py-2 px-4 border border-gray-600 rounded shadow-card glow-link"
-              onClick={() => {
-                document.getElementById("welcome").style.display = "none";
-                document.getElementById("home").style.opacity = 1;
-              }}
-              // className="glow-link text-4xl text-center font-bold"
-            >
-              WELCOME
-            </button>
-          </div> */}
           <div
             className="bg-hero-pattern bg-cover bg-no-repeat bg-center"
             id="home"
-            style={{ opacity: 0 }}
+            // style={{ opacity: 0 }}
           >
             <Navbar />
             <Hero />

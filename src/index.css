@@ -309,6 +309,7 @@ body::-webkit-scrollbar {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
+  overflow: visible;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -323,7 +324,7 @@ body {
   margin-bottom: -48px !important;
 }
 
-.vertical-timeline-element-icon: {
+.vertical-timeline-element-icon {
   /* transition: 2s ease-in-out; */
 }
 .vertical-timeline-element-icon:hover {
@@ -363,11 +364,13 @@ body {
 }
 #welcome div div {
   cursor: pointer;
-  background-image: url("./portrait11.png");
+  background-image: url("/portrait11.png");
   background-position: -250px -210px;
+  overflow-wrap: unset;
+  overflow: unset;
 }
 
-.welcome h2 {
+.welcome h3 {
   color: #fff;
   font-size: 4em;
   position: absolute;
@@ -378,13 +381,13 @@ body {
   /* cursor: pointer; */
 }
 
-.welcome h2:nth-child(1) {
+.welcome h3:nth-child(1) {
   color: transparent;
   -webkit-text-stroke: 2px rgba(255, 95, 255, 0.5);
   /* #acf; */
 }
 
-.welcome h2:nth-child(2) {
+.welcome h3:nth-child(2) {
   /* color: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
   color: --webkit-linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%); */
   color: rgba(205, 205, 205, 0.6);
@@ -424,7 +427,7 @@ body {
 }
 
 #home {
-  opacity: 0;
+  /* opacity: 0; */
   -webkit-transition: all 3s ease-in-out;
   -moz-transition: all 3s ease-in-out;
   -ms-transition: all 3s ease-in-out;
@@ -432,17 +435,15 @@ body {
   transition: all 3s ease-in-out;
 }
 
-//--------------------------------------------------------------------------------
-
 .blurred-box {
   position: relative;
   width: 250px;
   height: 350px;
   top: calc(50% - 175px);
   left: calc(50% - 125px);
-  border: outset 5px rgba(200, 200, 200, 0.35);
+  border: outset 3px rgba(200, 200, 200, 0.35);
   background: inherit;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .blurred-box:after {
@@ -478,7 +479,7 @@ body {
   position: relative;
   border-radius: 50%;
   background-size: contain;
-  background-image: url("./me.jpg");
+  background-image: url("/me.jpg");
   filter: blur(0px);
 }
 

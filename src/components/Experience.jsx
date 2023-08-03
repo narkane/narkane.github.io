@@ -108,7 +108,7 @@ const Experience = () => {
               paddingRight: "5px",
             }}
           >
-            CLICK TO EXPAND
+            CLICK ICON TO EXPAND
           </span>
           <br />T
         </span>

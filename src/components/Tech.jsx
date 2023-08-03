@@ -31,7 +31,8 @@ const Tech = () => {
               variants={fadeIn("up", "spring", index * 0.15, 1.2)}
             >
               <div className="w-28 h-28" key={technology.name}>
-                <BallCanvas icon={technology.icon} />
+                {/* <BallCanvas icon={technology.icon} /> */}
+                <img src={technology.icon} />
                 <span className="flex justify-center text-[#915EFF] text-center">
                   {technology.name}
                 </span>
