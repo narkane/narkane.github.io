@@ -37,7 +37,7 @@ import datanow from "./company/datanow.png";
 import weaselware from "./company/weaselware.jpg";
 import devmountain from "./company/devmountain.png";
 
-import carrent from "./carrent.png";
+import care from "./care.mp4";
 // import jobit from "./jobit.png";
 import awkwardstyles from "./awkwardstyles.png";
 import bbp from "./bbp.png";
@@ -82,7 +82,7 @@ export {
   datanow,
   weaselware,
   devmountain,
-  carrent,
+  care,
   awkwardstyles,
   bbp,
   ben,

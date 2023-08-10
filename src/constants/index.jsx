@@ -24,7 +24,7 @@ import {
   datanow,
   weaselware,
   devmountain,
-  carrent,
+  care,
   awkwardstyles,
   bbp,
   ben,
@@ -242,7 +242,7 @@ const testimonials = [
     testimonial:
       "A skilled and efficient web developer who truly cares about his clients' success. He's just so smart.",
     name: "Jana Leys",
-    designation: "Owner",
+    designation: "Co-owner",
     company: "Courtesy A/C and Heating",
     image: jana,
   },
@@ -337,7 +337,7 @@ const projects = [
         color: "",
       },
     ],
-    image: carrent,
+    image: care,
     source_code_link: "https://github.com/narkane/care-frontend",
   },
   {

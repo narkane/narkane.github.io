@@ -8,14 +8,25 @@ import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = (project) => {
-  console.log(
-    project.index,
-    project.name,
-    project.description,
-    project.tags,
-    project.image,
-    project.source_code_link
-  );
+  const videoExtensions = [".mpg", ".mp2", ".mpeg", ".mpe", ".mpv", ".mp4"]; //you can add more extensions
+  const imageExtensions = [".gif", ".jpg", ".jpeg", ".png"]; // you can add more extensions
+
+  let status;
+
+  const isImage = (v) => {
+    imageExtensions.map((e) => {
+      status = v.includes(e);
+    });
+    return status;
+  };
+  const isVideo = (v) => {
+    videoExtensions.map((e) => {
+      status = v.includes(e);
+    });
+
+    return status;
+  };
+
   return (
     <motion.div variants={fadeIn("down", "spring", project.index * 0.5, 1.5)}>
       <Tilt
@@ -36,11 +47,24 @@ const ProjectCard = (project) => {
           }}
         >
           <div className="relative w-full h-[230px]">
-            <img
-              src={project.image}
-              alt={project.name}
-              className="w-full h-full object-cover rounded-2xl"
-            />
+            {isImage(project.image) && (
+              <img
+                src={project.image}
+                alt={project.name}
+                className="w-full h-full object-cover rounded-2xl"
+              />
+            )}
+            {isVideo(project.image) && (
+              <video
+                autoPlay
+                muted
+                loop
+                alt={project.name}
+                className="w-full h-full object-cover rounded-2xl"
+              >
+                <source src={project.image} />
+              </video>
+            )}
             <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
               <div
                 onClick={() => window.open(project.source_code_link, "_blank")}
