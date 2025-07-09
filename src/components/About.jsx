@@ -39,7 +39,7 @@ const ServiceCard = (index) => {
 
 const About = () => {
   return (
-    <motion.div variants={fadeIn("down", "spring", 0.5, 1.5)}>
+    <section id="about" className={`max-w-7xl mx-auto ${styles.paddingY}`}>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
@@ -108,7 +108,7 @@ const About = () => {
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
-    </motion.div>
+    </section>
   );
 };
 
