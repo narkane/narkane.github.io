@@ -59,7 +59,7 @@ const App = () => {
                 onClick={() => {
                   // document.getElementById("welcome").style.display = "none";
                   document.getElementById("welcome").remove();
-                  document.body.style.overflow = "visible"
+                  // document.body.style.overflow = "visible"
                   // document.getElementById("home").style.opacity = 1;
                 }}
               >
@@ -95,7 +95,7 @@ const App = () => {
             <Hero />
           </div>
         </LoadingOverlay>
-        OUTSIDE SECTION testing flag<BR/>
+        OUTSIDE SECTION testing flag
         <About />
         <Experience />
 
