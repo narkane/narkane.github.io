@@ -9,6 +9,7 @@ body {
   overflow-x: hidden;
   width: 100vw;
   max-width: 100vw;
+  pointer-events: all;
 }
 
 a {
@@ -44,7 +45,7 @@ a,
 button,
 input,
 select {
-  pointer-events: auto;
+  pointer-events: all;
 }
 
 .lil-gui {
