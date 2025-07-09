@@ -23,7 +23,7 @@ const App = () => {
   const [isActive, setIsActive] = useState(true);
 
   document.body.style.height = "100%";
-  document.body.style.overflow = "hidden";
+  document.body.style.overflow = "visible";
 
   setTimeout(() => {
     setIsActive(false);
