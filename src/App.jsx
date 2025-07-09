@@ -95,7 +95,7 @@ const App = () => {
             <Hero />
           </div>
         </LoadingOverlay>
-        TEST
+        OUTSIDE SECTION testing flag<BR/>
         <About />
         <Experience />
 

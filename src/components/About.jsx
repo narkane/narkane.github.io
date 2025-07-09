@@ -40,7 +40,7 @@ const ServiceCard = (index) => {
 const About = () => {
   return (
     <>
-    TEST
+    Inside: TEST
     <section id="about">
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
