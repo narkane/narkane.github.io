@@ -39,7 +39,9 @@ const ServiceCard = (index) => {
 
 const About = () => {
   return (
-    <section id="about" className={`max-w-7xl mx-auto ${styles.paddingY}`}>
+    <>
+    TEST
+    <section id="about">
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
@@ -109,7 +111,8 @@ const About = () => {
         ))}
       </div>
     </section>
+    </>
   );
 };
 
-export default SectionWrapper(About, "about");
+export default About;

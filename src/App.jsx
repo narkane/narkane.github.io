@@ -23,7 +23,7 @@ const App = () => {
   const [isActive, setIsActive] = useState(true);
 
   document.body.style.height = "100%";
-  document.body.style.overflow = "visible";
+  // document.body.style.overflow = "visible";
 
   setTimeout(() => {
     setIsActive(false);
@@ -55,20 +55,21 @@ const App = () => {
           >
             <Tilt>
               <div
-                class="blurred-box border-opacity-100 rounded-xl flex h-[350px] w-[250px] z-10 backdrop-blur-[1px] shadow-card shadow-[#5D508D] bg-blue-600 bg-opacity-[0.05]"
+                className="blurred-box border-opacity-100 rounded-xl flex h-[350px] w-[250px] z-10 backdrop-blur-[1px] shadow-card shadow-[#5D508D] bg-blue-600 bg-opacity-[0.05]"
                 onClick={() => {
                   // document.getElementById("welcome").style.display = "none";
                   document.getElementById("welcome").remove();
+                  document.body.style.overflow = "visible"
                   // document.getElementById("home").style.opacity = 1;
                 }}
               >
-                <div class="user-login-box">
-                  <span class="user-icon">
+                <div className="user-login-box">
+                  <span className="user-icon">
                     <img id="portrait" src="./portriat14.png" />
                   </span>
-                  <div class="user-name">John Thummel</div>
+                  <div className="user-name">John Thummel</div>
 
-                  <div class="welcome glow-link font-bold">
+                  <div className="welcome glow-link font-bold">
                     <a
                       onMouseEnter={() => {
                         document.getElementById("waves").style.opacity = 0;
