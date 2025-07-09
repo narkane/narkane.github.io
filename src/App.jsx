@@ -23,7 +23,8 @@ const App = () => {
   const [isActive, setIsActive] = useState(true);
 
   document.body.style.height = "100%";
-  // document.body.style.overflow = "visible";
+  document.body.style.overflow = "hidden";
+  // document.body.Navbar.style = "hidden";
 
   setTimeout(() => {
     setIsActive(false);
@@ -59,8 +60,8 @@ const App = () => {
                 onClick={() => {
                   // document.getElementById("welcome").style.display = "none";
                   document.getElementById("welcome").remove();
-                  // document.body.style.overflow = "visible"
-                  // document.getElementById("home").style.opacity = 1;
+                  document.body.style.overflow = "visible"
+                  document.getElementById("home").style.visibility = "visible";
                 }}
               >
                 <div className="user-login-box">
@@ -89,13 +90,12 @@ const App = () => {
           <div
             className="bg-hero-pattern bg-cover bg-no-repeat bg-center"
             id="home"
-            // style={{ opacity: 0 }}
+            style={{ visibility: "hidden" }}
           >
             <Navbar />
             <Hero />
           </div>
         </LoadingOverlay>
-        OUTSIDE SECTION testing flag
         <About />
         <Experience />
 
