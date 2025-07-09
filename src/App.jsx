@@ -15,7 +15,7 @@ import {
   Works,
   StarsCanvas,
 } from "./components";
-import { Tilt } from "react-tilt";
+import Tilt from "react-parallax-tilt";
 
 LoadingOverlay.propTypes = undefined;
 
@@ -54,7 +54,13 @@ const App = () => {
             id="welcome"
             className="flex justify-center items-center h-screen bg-hero-pattern bg-cover bg-no-repeat bg-center"
           >
-            <Tilt>
+            <Tilt
+              tiltMaxAngleX={25}
+              tiltMaxAngleY={25}
+              scale={1.05}
+              transitionSpeed={400}
+              gyroscope={true}
+            >
               <div
                 className="blurred-box border-opacity-100 rounded-xl flex h-[350px] w-[250px] z-10 backdrop-blur-[1px] shadow-card shadow-[#5D508D] bg-blue-600 bg-opacity-[0.05]"
                 onClick={() => {
