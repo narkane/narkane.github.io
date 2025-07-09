@@ -95,6 +95,7 @@ const App = () => {
             <Hero />
           </div>
         </LoadingOverlay>
+        TEST
         <About />
         <Experience />
 
